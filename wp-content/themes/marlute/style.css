@@ -1,0 +1,136 @@
+/*
+Theme Name: Marlute
+Theme URL: quckdevelopers
+Description: Marlute worpdress theme by Quckdevelopers
+Author: quckdevelopers
+Author URI: quckdevelopers
+Version: 1.0.0
+Tags: Kyros, Wordpress Theme, Flexible, Dynamic, Clean, Quckdevelopers
+*/
+
+@charset "UTF-8";
+/*------------------------------------------------------------------
+[Table of contents]
+
+----------------------------------------------------------*/
+/*.hero__teaser {
+    height: 100%;
+
+    .section {
+    &__inner {
+    display: flex;
+    min-height: 80vh;
+    flex-direction: column;
+    padding: 2.5em 1.5em 10em;
+    justify-content: space-between;
+
+    @include media(laptop) {
+    padding: 0;
+}
+}
+}
+
+.primary__button {
+
+    min-width: 30%;
+    margin: 0 auto;
+    @include media(laptop) {
+    min-width: none!important;
+    margin: 0;
+    margin-left: auto;   
+}
+}
+}
+
+.hero__teaser--image {
+    position: absolute;
+    background: url("./assets/images/blush-visual.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.card__teaser--glas {
+    position: relative;
+    height: em(200);
+    margin: 0 auto;
+    border: 1px solid #fff;
+    padding: 1.5em;
+    border-radius: 1.5em;
+    box-shadow: 0 18px 95px -43px #000;
+    overflow: hidden;
+
+    background: rgba(255,255,255, 0.2);
+    backdrop-filter: blur(5px);
+    border: solid 2px transparent;
+    background-clip: padding-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card__inner {
+    position: relative;
+    z-index: 2;
+
+    @include media(laptop) {
+    margin-left: auto;        
+}
+
+h1, h3 {
+    @include media(laptop) {
+    text-align: right;
+}
+}
+}
+
+@include media(laptop) {
+
+    display: flex;
+    flex-direction: column;
+    width: em(350);
+    margin: 0;
+    margin-left: auto;
+    margin-top: 2.5em;
+
+    height: auto;
+    padding: 1.5em;
+}
+
+@include media(desktop) {
+    width: em(500);
+    height: em(300);
+
+    padding: 1.5em 3em;
+}
+}
+
+.holder {
+    position: relative;
+    &:before,
+        &:after {
+        animation: orbit 5s linear infinite;
+    border-radius: 50%;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    content: "";
+    height: 150px;
+    position: absolute;
+    width: 150px;
+}
+&:before {
+    background: lightcoral;
+    background: radial-gradient(to bottom left, rgba(207, 109, 109, 0.897), #ffaa9c);
+}
+&:after {
+    animation-delay: -2.5s;
+    background: rgb(177, 177, 177);
+    background: radial-gradient(to top left, #5a5a5a, #bebebe);
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+}*/
+

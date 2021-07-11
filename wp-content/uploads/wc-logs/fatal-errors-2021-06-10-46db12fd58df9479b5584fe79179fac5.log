@@ -1,0 +1,28 @@
+2021-06-10T12:05:05+00:00 CRITICAL Uncaught Error: Call to undefined function post_type_slideshow() in C:\xampp\htdocs\marlute\wp-content\themes\marlute\functions.php:78
+Stack trace:
+#0 C:\xampp\htdocs\marlute\wp-content\themes\marlute\functions.php(43): generate_post_types()
+#1 C:\xampp\htdocs\marlute\wp-includes\class-wp-hook.php(292): init_action('')
+#2 C:\xampp\htdocs\marlute\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\marlute\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\marlute\wp-settings.php(560): do_action('init')
+#5 C:\xampp\htdocs\marlute\wp-config.php(90): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\marlute\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\marlute\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\marlute\wp-content\themes\marlute\functions.php on line 78
+
+2021-06-10T12:05:06+00:00 CRITICAL Uncaught Error: Call to undefined function post_type_slideshow() in C:\xampp\htdocs\marlute\wp-content\themes\marlute\functions.php:78
+Stack trace:
+#0 C:\xampp\htdocs\marlute\wp-content\themes\marlute\functions.php(43): generate_post_types()
+#1 C:\xampp\htdocs\marlute\wp-includes\class-wp-hook.php(292): init_action('')
+#2 C:\xampp\htdocs\marlute\wp-includes\class-wp-hook.php(316): WP_Hook->apply_filters(NULL, Array)
+#3 C:\xampp\htdocs\marlute\wp-includes\plugin.php(484): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\marlute\wp-settings.php(560): do_action('init')
+#5 C:\xampp\htdocs\marlute\wp-config.php(90): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\marlute\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\marlute\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+  thrown in C:\xampp\htdocs\marlute\wp-content\themes\marlute\functions.php on line 78
+
+2021-06-10T12:11:47+00:00 CRITICAL syntax error, unexpected '}', expecting end of file in C:\xampp\htdocs\marlute\wp-content\themes\marlute\functions.php on line 111
+

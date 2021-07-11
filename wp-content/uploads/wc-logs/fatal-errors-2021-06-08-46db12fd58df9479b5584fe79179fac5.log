@@ -1,0 +1,8 @@
+2021-06-08T16:55:54+00:00 CRITICAL Cannot redeclare open_product_column_grid() (previously declared in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php:32) in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php on line 31
+
+2021-06-08T16:56:54+00:00 CRITICAL Cannot redeclare open_product_column_grid() (previously declared in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php:32) in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php on line 31
+
+2021-06-08T16:57:31+00:00 CRITICAL Cannot redeclare open_product_collumn_grid() (previously declared in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php:32) in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php on line 31
+
+2021-06-08T16:57:50+00:00 CRITICAL Cannot redeclare open_product_collumn_grid() (previously declared in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php:32) in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php on line 31
+
