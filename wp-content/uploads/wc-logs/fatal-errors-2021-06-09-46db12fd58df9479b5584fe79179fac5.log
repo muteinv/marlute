@@ -1,0 +1,10 @@
+2021-06-09T07:11:06+00:00 CRITICAL Cannot redeclare open_product_collumn_grid() (previously declared in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php:32) in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php on line 31
+
+2021-06-09T07:25:17+00:00 CRITICAL Cannot redeclare open_product_collumn_grid() (previously declared in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php:32) in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php on line 31
+
+2021-06-09T10:17:38+00:00 CRITICAL Cannot redeclare open_product_collumn_grid() (previously declared in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php:32) in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php on line 31
+
+2021-06-09T10:18:55+00:00 CRITICAL Cannot redeclare open_product_collumn_grid() (previously declared in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php:32) in C:\xampp\htdocs\marlute\wp-content\plugins\woocommerce\templates\content-product.php on line 31
+
+2021-06-09T12:30:15+00:00 CRITICAL syntax error, unexpected '<', expecting end of file in C:\xampp\htdocs\marlute\wp-content\themes\marlute\woocommerce\archive-product.php on line 32
+
