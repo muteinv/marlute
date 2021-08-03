@@ -41,7 +41,7 @@ if (empty($product) || !$product->is_visible()) {
 }
 </style>
 <li <?php wc_product_class('products__list--item', $product); ?> >
-    <article style="" class="product-article" id="woodsmoke">
+    <article style="" class="product-articl" id="woodsmoke">
         <div class="product-card glas animState">
             <div class="product-card__inner">
                 <?php

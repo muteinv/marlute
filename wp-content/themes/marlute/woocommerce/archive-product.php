@@ -1,6 +1,3 @@
-<style>
-
-</style>
 <?php
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive
@@ -30,84 +27,22 @@ get_header('shop');
  */
 ?>
 <style>
-    .products__list--item.product.type-product{
+        .products__list--item.product.type-product{
         padding: 0 1.5em!important;
         margin-right: 0px!important;
     }
-    .woocommerce ul.products li.product a img{
-        width: 8em!important;
-        float: right;
+       .price {
+        width: 200px!important;
+        float: left;
+        text-align: left;
+        padding-top: 10px;
+        color: #000!important;
+        position: absolute;
+        margin-top: 2.5em!important;
     }
-    .woocommerce-LoopProduct-link{
-        width: 100%
+        .product-card--header {
+        margin-bottom: 10px!important;
     }
-    @media (max-width: 768px) {
-    .woocommerce ul.products[class*=columns-] li.product,
-    .woocommerce-page ul.products[class*=columns-] li.product {
-        width: 100%;
-    }
-    .attachment-woocommerce_thumbnail.size-woocommerce_thumbnail{
-       margin-right: 1px!important;
-}
-}
-.product-card--header {
-    color: #000;
-    float: left;
-}
-.button.product_type_simple.add_to_cart_button{
-    margin-top: -85px!important;
-}
-.button.product_type_simple{
-    margin-top: -85px!important;
-}
-.price {
-width: 200px!important;
-float: left;
-text-align: left;
-padding-top: 10px;
-color: #000!important;
-}
-
-.star-rating {
-width: 200px!important;
-float: left;
-text-align: left;
-padding-top: 10px;
-color: #000!important;
-}
-
-.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail{
-       margin-top: -85px !important;
-       margin-right: -34px !important;
-}
-.products__list--item {
-    margin-top: 91px!important;
-}
-.primary__button {
-    border: 5px solid white!important;
-    background: white!important;
-    border-radius: 5em!important;
-    box-shadow: 0 8px 8px -10px #000!important;
-    direction: ltr!important;
-	font-family: Roboto,sans-serif!important;
-	font-size: .9375em!important;
-}
-.primary__button--transparent {
-    background: #ffffff7d!important;
-    border: 5px solid transparent!important;
-    box-shadow: 0 4px 12px 0 #0000008c!important;
-}
-.product-warenkorb-link {
-	direction: ltr!important;
-	font-family: Roboto,sans-serif!important;
-	font-size: .9375em!important;
-	font-variation-settings: "wght" 400,"wdth" 100;
-	font-weight: 400;
-}
-.product-card--header {
-    margin-bottom: 10px!important;
-}
-
 </style>
 <div class="products container-content">
     <div class="products__inner">
@@ -118,7 +53,7 @@ color: #000!important;
                 do_action('woocommerce_before_main_content');
                 ?>
                 <header class="woocommerce-products-header">
-                <?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
+                    <?php if (apply_filters('woocommerce_show_page_title', true)) : ?>
                         <h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
                     <?php endif; ?>
 
@@ -132,40 +67,40 @@ color: #000!important;
                     do_action('woocommerce_archive_description');
                     ?>
                 </header>
-                    <?php
-                    if (woocommerce_product_loop()) {
+                <?php
+                if (woocommerce_product_loop()) {
 
-                        /**
-                         * Hook: woocommerce_before_shop_loop.
-                         *
-                         * @hooked woocommerce_output_all_notices - 10
-                         * @hooked woocommerce_result_count - 20
-                         * @hooked woocommerce_catalog_ordering - 30
-                         */
-                        do_action('woocommerce_before_shop_loop');
+                    /**
+                     * Hook: woocommerce_before_shop_loop.
+                     *
+                     * @hooked woocommerce_output_all_notices - 10
+                     * @hooked woocommerce_result_count - 20
+                     * @hooked woocommerce_catalog_ordering - 30
+                     */
+                    do_action('woocommerce_before_shop_loop');
 
-                        woocommerce_product_loop_start();
+                    woocommerce_product_loop_start();
 
-                        if (wc_get_loop_prop('total')) {
-                            while (have_posts()) {
-                                the_post();
+                    if (wc_get_loop_prop('total')) {
+                        while (have_posts()) {
+                            the_post();
 
-                                /**
-                                 * Hook: woocommerce_shop_loop.
-                                 */
-                                ?>
+                            /**
+                             * Hook: woocommerce_shop_loop.
+                             */
+                            ?>
 
                             <?php do_action('woocommerce_shop_loop'); ?>
 
 
 
-            <?php
-            wc_get_template_part('content', 'product');
-        }
-    }
+                            <?php
+                            wc_get_template_part('content', 'product');
+                        }
+                    }
 
-    woocommerce_product_loop_end();
-    ?>
+                    woocommerce_product_loop_end();
+                    ?>
 
                     <?php
                     /**

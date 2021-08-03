@@ -51,7 +51,7 @@ define( 'DB_USER', 'k140745_marlutedev' );
 
 /** MySQL database password */
 
-define( 'DB_PASSWORD', 'hg7Z9$8w' );
+define( 'DB_PASSWORD', 'aiD%4p16' );
 
 
 /** MySQL hostname */

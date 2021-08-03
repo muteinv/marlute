@@ -60,10 +60,10 @@ add_theme_support('post-thumbnails');
 
        //javascripts
 
-//        if (file_exists(ABSPATH . 'wp-content/themes/marlute/js/index.bundle.js')) {
-//            wp_register_script('clubcrash_index.bundle_js', trailingslashit(get_template_directory_uri()) . 'js/index.bundle.js', array('jquery'), '1.0', false);
-//            wp_enqueue_script('clubcrash_index.bundle_js');
-//        }
+if (file_exists(ABSPATH . 'wp-content/themes/marlute/index.bundle.js')) {
+            wp_register_script('marlute_index.bundle_js', trailingslashit(get_template_directory_uri()) . 'index.bundle.js', array('jquery'), '1.0', false);
+            wp_enqueue_script('marlute_index.bundle_js');
+        }
       
 
 //    
@@ -109,30 +109,60 @@ if(class_exists('WooCommerce')){
     function woocommerce_template_loop_product_title() {
     echo wp_kses_post( '<h4 class="product-card--header">' . get_the_title() . '</h4>' );
 }
-		// Remove prices
-// define the woocommerce_get_price_excluding_tax callback 
-function filter_woocommerce_get_price_excluding_tax( $price, $qty, $product ) { 
-    // make filter magic happen here... 
-    return $price; 
-}; 
-         
-// add the filter 
-add_filter( 'woocommerce_get_price_excluding_tax', 'filter_woocommerce_get_price_excluding_tax', 10, 3 );	
-    }
 
-   $ddd = apply_filters( 'woocommerce_get_price_excluding_tax', $price, $qty, $product );     		
+remove_action( 'woocommerce_after_shop_loop_item', 'second_button_single_variation', 30 );
+
+
+add_action( 'woocommerce_after_shop_loop_item', 'second_button_single_variation', 30 );
+function second_button_single_variation() {
+    global $product;
+$link = $product->get_permalink();
+
+}
+	
+	
+	
+	
+	
+
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
+add_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
 
-add_filter( 'woocommerce_shop_loop_item_title' , 'custom_woocommerce_template_loop_product_title', 10);
 
-function custom_woocommerce_template_loop_product_title () {
-    echo '
-    <div class="custom-title-wrapper">
-    
-    <h2>' . woocommerce_template_loop_price().  '</h2>
-    </div>'
-    ;
+if ( ! function_exists( 'woocommerce_template_loop_product_thumbnail' ) ) {
+    function woocommerce_template_loop_product_thumbnail() {
+        echo woocommerce_get_product_thumbnail();
+    } 
+}
+if (!function_exists('woocommerce_get_product_thumbnail')) {
+
+        function woocommerce_get_product_thumbnail($size = 'shop_catalog', $placeholder_width = 0, $placeholder_height = 0) {
+            global $post, $woocommerce;
+            $product = wc_get_product($post->ID);
+            $permalink = $product->get_permalink();;
+            $formatted_price = $product->get_price();
+            $title = $product->get_title();
+			$curency = get_woocommerce_currency_symbol();
+               $output = '<a href="' . $permalink . '" class="imagewrapper">';
+            $output .= '<div class="cust_p_left pcart_l"><div style="float: left;" class="cust_title"><h4>'.$title.'</h4></div></br>';
+            $output .= '<div class="cust_price pcart_l">'.$curency . $formatted_price.'</div></br>';
+            $output .= '<div class="cust_taxinc_left pcart_l"></div></div>';
+			
+            
+            if (has_post_thumbnail()) {
+                $output .= get_the_post_thumbnail($post->ID, $size);
+            }
+            $output .= '</a>';
+            return $output;
+        }
+
+    }
+	
 }	
+
+
+
 
         
 ?>

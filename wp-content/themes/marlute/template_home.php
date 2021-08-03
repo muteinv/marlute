@@ -23,11 +23,13 @@ global $post;
         <div class="section__inner">
             <div class="card__teaser--glas">
                 <div class="card__inner">
-                    <h1>The New Collection </h1>
-                    <h3>Quality Perfumes </h3>
+                    <h1><?php echo get_post_meta($post->ID,'cus_title_1',true); ?> </h1>
+                    <h3><?php echo get_post_meta($post->ID,'cus_title_2',true); ?> </h3>
                 </div>
-            </div><button class="primary__button animState primary__button--transparent"><a href="<?php echo get_home_url(); ?>/shop">Shop
-                    now</a></button>
+            </div><?php
+           $link = get_term_link( 25, 'product_cat' );
+            ?>
+            <button class="primary__button animState primary__button--transparent"><a href="<?php echo $link ?>"><?php echo get_post_meta($post->ID,'cus_button_text',true); ?></a></button>
         </div>
     </div>
     

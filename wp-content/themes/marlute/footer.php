@@ -281,7 +281,17 @@
             </symbol>
         </defs>
     </svg>
-    <script defer="defer" src="<?php echo get_template_directory_uri(); ?>/index.bundle.js"></script>
+    <!--<script defer="defer" src="<?php // echo get_template_directory_uri(); ?>/index.bundle.js"></script>-->
 </body>
+<script>
+ jQuery(document).ready(function(){
+     jQuery('.products__list--item').each(function () {
+            var httm = jQuery(this).find(".wgm-info");
+                    jQuery(this).find(".cust_taxinc_left").append(httm);
+//            jQuery(this).hide(); // Hide move button
+        //    alert('bb')
+    });
+     });
+</script>
 <?php wp_footer(); ?>
 </html>

@@ -20,7 +20,7 @@
     .slick-slide .attachment-shop_thumbnail{display: block!important;}*/
 .product-detail .product {
 	max-width: unset;
-	margin: 0 auto!important;
+	/*margin: 0 auto!important;*/
 }
 .primary__button .primary__button--transparent .animState .single_add_to_cart_button .alt {
 	width: 100%!important;
@@ -48,9 +48,6 @@
 .product-card--header {
     color: #000;
     float: left;
-}
-.button.product_type_simple.add_to_cart_button{
-    margin-top: -85px!important;
 }
 .button.product_type_simple{
     margin-top: -85px!important;
